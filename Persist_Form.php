@@ -1,3 +1,9 @@
+<?php
+	/* Program name: Persist_Form
+	 * Description: Script displays a form that ask for name and comment.
+	 *
+	 */
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -21,10 +27,10 @@
 		</style>
 	</head>
 	<body>
-		<form>
-			Name: <input type="text" name="UserName" >
-			<textarea rows="5" cols="50" name="Comment" placeholder="Comments"></textarea></br>
-			<input type="Submit" value="submit">
-		</form>
+			<form action="processform.php" method="POST">
+					Name: <input type="text" name="Name" maxlength="65" >
+					 <textarea rows="5" cols="50" name="Comment" placeholder="Comments"></textarea></br>
+					 <input type="Submit" value="Post Comment">
+			</form>
 	</body>
 </html>

@@ -1,22 +1,13 @@
 <?php 
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
 
-	$conn = new mysqli($servername, $username, $password);
+	function Connect(){
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "postDB";
+	
+		$conn = new mysqli($servername, $username, $password, $dbname) or die("Connection failed:" . $conn->$connect_error);
 
-	if ($conn->connect_error) {
-		die("Connection failed:" . $conn->$connect_error);
+		return $conn;
 	}
-
-	$sql = "CREATE DATABASE postDB";
-	if ($conn->query($sql) === TRUE) {
-		echo "Database created successfully";
-	}
-
-	else {
-		echo "Error creating database:" . $conn->error;
-	}
-
-	$conn->close();
-?>
+	?>
